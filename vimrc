@@ -30,6 +30,7 @@ Bundle 'powerline/powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'suan/vim-instant-markdown'
+Plugin 'dsawardekar/wordpress.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
