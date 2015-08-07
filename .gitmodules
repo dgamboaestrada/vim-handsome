@@ -1,3 +1,6 @@
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = git@github.com:VundleVim/Vundle.vim.git
+[submodule "plugins/wordpress.vim"]
+	path = plugins/wordpress.vim
+	url = git@github.com:dsawardekar/wordpress.vim.git
