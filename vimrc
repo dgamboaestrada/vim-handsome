@@ -1,6 +1,14 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" schema config
+syntax enable
+set background=light " values light, dark
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=256
+colorscheme solarized
+" end schema config
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
