@@ -3,9 +3,10 @@ filetype off                  " required
 
 " schema config
 syntax enable
-set background=light " values light, dark
+set background=dark " values light, dark
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=256
+"set t_Co=16
 colorscheme solarized
 " end schema config
 
