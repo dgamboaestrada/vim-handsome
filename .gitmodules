@@ -4,3 +4,6 @@
 [submodule "schema/vim-colors-solarized"]
 	path = schema/vim-colors-solarized
 	url = git@github.com:altercation/vim-colors-solarized.git
+[submodule "other/fonts"]
+	path = other/fonts
+	url = git@github.com:powerline/fonts.git
