@@ -22,13 +22,25 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-Plugin 'powerline/powerline'
+" Plugin vim-airline
+Plugin 'bling/vim-airline'
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+" End vim-airline
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'dsawardekar/wordpress.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim.git'
+" Plugin gitgutter
+if has('signs')
+    Plugin 'airblade/vim-gitgutter'
+    let g:gitgutter_escape_grep = 1   " Use raw grep
+    let g:gitgutter_eager = 0         " Don't run eagerly
+endif
+" End gitgutter
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
