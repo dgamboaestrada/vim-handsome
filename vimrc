@@ -4,9 +4,9 @@ filetype off                  " required
 " schema config
 syntax enable
 set background=dark " values light, dark
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=256
-"set t_Co=16
+let g:solarized_termcolors=16
+let g:solarized_termtrans=1
+set t_Co=256
 colorscheme solarized
 " end schema config
 
@@ -88,11 +88,13 @@ au BufReadPost *.ctp set syntax=php
 
 " Mapping
 " mapping NERDTree
-map <F2> :NERDTreeToggle<cr>
-" Mapping move line
+map <F2> :NERDTreeToggle<CR>
+" mapping move line
 nnoremap <C-S-k> :m .-2<CR>==
 nnoremap <C-S-j> :m .+1<CR>==
 inoremap <C-S-j> <Esc>:m .+1<CR>==gi
 inoremap <C-S-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-S-j> :m '>+1<CR>gv=gv
 vnoremap <C-S-k> :m '<-2<CR>gv=gv
+" mapping save
+map <C-g> :w <CR>
