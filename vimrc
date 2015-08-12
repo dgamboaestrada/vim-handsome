@@ -4,9 +4,9 @@ filetype off                  " required
 " schema config
 syntax enable
 set background=dark " values light, dark
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=256
-"set t_Co=16
+let g:solarized_termcolors=16
+let g:solarized_termtrans=1
+set t_Co=256
 colorscheme solarized
 " end schema config
 
@@ -22,13 +22,25 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
-Plugin 'powerline/powerline'
+" Plugin vim-airline
+Plugin 'bling/vim-airline'
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+" End vim-airline
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'dsawardekar/wordpress.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim.git'
+" Plugin gitgutter
+if has('signs')
+    Plugin 'airblade/vim-gitgutter'
+    let g:gitgutter_escape_grep = 1   " Use raw grep
+    let g:gitgutter_eager = 0         " Don't run eagerly
+endif
+" End gitgutter
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,9 +81,20 @@ set title                       " change the terminal's title
 set visualbell                  " don't beep
 set noerrorbells                " don't beep
 
-map <F2> :NERDTreeToggle<cr>
-
 autocmd FileType groovy setlocal noexpandtab copyindent  preserveindent  softtabstop=0  shiftwidth=4  tabstop=4
 au BufReadPost *.twig set syntax=html
 au BufReadPost *.ejs set syntax=html
 au BufReadPost *.ctp set syntax=php
+
+" Mapping
+" mapping NERDTree
+map <F2> :NERDTreeToggle<CR>
+" mapping move line
+nnoremap <C-S-k> :m .-2<CR>==
+nnoremap <C-S-j> :m .+1<CR>==
+inoremap <C-S-j> <Esc>:m .+1<CR>==gi
+inoremap <C-S-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-S-j> :m '>+1<CR>gv=gv
+vnoremap <C-S-k> :m '<-2<CR>gv=gv
+" mapping save
+map <C-g> :w <CR>
