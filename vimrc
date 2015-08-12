@@ -81,9 +81,18 @@ set title                       " change the terminal's title
 set visualbell                  " don't beep
 set noerrorbells                " don't beep
 
-map <F2> :NERDTreeToggle<cr>
-
 autocmd FileType groovy setlocal noexpandtab copyindent  preserveindent  softtabstop=0  shiftwidth=4  tabstop=4
 au BufReadPost *.twig set syntax=html
 au BufReadPost *.ejs set syntax=html
 au BufReadPost *.ctp set syntax=php
+
+" Mapping
+" mapping NERDTree
+map <F2> :NERDTreeToggle<cr>
+" Mapping move line
+nnoremap <C-S-k> :m .-2<CR>==
+nnoremap <C-S-j> :m .+1<CR>==
+inoremap <C-S-j> <Esc>:m .+1<CR>==gi
+inoremap <C-S-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-S-j> :m '>+1<CR>gv=gv
+vnoremap <C-S-k> :m '<-2<CR>gv=gv
