@@ -34,6 +34,7 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'dsawardekar/wordpress.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim.git'
+Plugin 'ap/vim-buftabline'
 " Plugin gitgutter
 if has('signs')
     Plugin 'airblade/vim-gitgutter'
@@ -102,3 +103,8 @@ vnoremap <C-S-k> :m '<-2<CR>gv=gv
 :inoremap <c-s> <Esc>:update<CR>
 :inoremap <c-s> <c-o>:update<CR>
 vmap <C-s> <esc>:w<CR>gv
+" mapping change buffer (tab)
+set hidden
+nnoremap <C-N> :bnext<CR>   " next buffer
+nnoremap <C-P> :bprev<CR>   " prev buffer
+nnoremap <C-P> :bd<CR>      " close single buffer, if has changes needs ! to force
