@@ -101,4 +101,5 @@ vnoremap <C-S-k> :m '<-2<CR>gv=gv
 " mapping save
 :inoremap <c-s> <Esc>:update<CR>
 :inoremap <c-s> <c-o>:update<CR>
+nnoremap <C-s> :w<CR>
 vmap <C-s> <esc>:w<CR>gv
