@@ -99,4 +99,6 @@ inoremap <C-S-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-S-j> :m '>+1<CR>gv=gv
 vnoremap <C-S-k> :m '<-2<CR>gv=gv
 " mapping save
-map <C-g> :w <CR>
+:inoremap <c-s> <Esc>:update<CR>
+:inoremap <c-s> <c-o>:update<CR>
+vmap <C-s> <esc>:w<CR>gv
