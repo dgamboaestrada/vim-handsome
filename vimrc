@@ -107,4 +107,4 @@ vmap <C-s> <esc>:w<CR>gv
 set hidden
 nnoremap <C-N> :bnext<CR>   " next buffer
 nnoremap <C-P> :bprev<CR>   " prev buffer
-nnoremap <C-P> :bd<CR>      " close single buffer, if has changes needs ! to force
+nnoremap <C-X> :bd<CR>      " close single buffer, if has changes needs ! to force
