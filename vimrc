@@ -80,6 +80,8 @@ set wildignore=*.swp,*.bak,*.pyc,*.class " ignore this extensions
 set title                       " change the terminal's title
 set visualbell                  " don't beep
 set noerrorbells                " don't beep
+set cursorline                  " hightlight current line
+set wildmenu                    " visual autocomplete for command menu
 
 autocmd FileType groovy setlocal noexpandtab copyindent  preserveindent  softtabstop=0  shiftwidth=4  tabstop=4
 au BufReadPost *.twig set syntax=html
