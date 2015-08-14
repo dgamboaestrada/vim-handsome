@@ -115,3 +115,6 @@ set hidden
 nnoremap <C-N> :bnext<CR>   " next buffer
 nnoremap <C-P> :bprev<CR>   " prev buffer
 nnoremap <C-X> :bd<CR>      " close single buffer, if has changes needs ! to force
+" mapping yank +
+vnoremap <C-c> :yank + <CR> " copy to system clipboard in normal mode
+nnoremap <C-c> :yank + <CR> " copy to system clipboard in visual mode
