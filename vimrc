@@ -92,6 +92,7 @@ au BufReadPost *.ctp set syntax=php
 " Mapping
 " mapping NERDTree
 map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeFind<CR>    " locates the file in the tree
 " mapping move line
 nnoremap <C-S-k> :m .-2<CR>==
 nnoremap <C-S-j> :m .+1<CR>==
