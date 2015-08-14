@@ -35,6 +35,7 @@ Plugin 'dsawardekar/wordpress.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'ap/vim-buftabline'
+Plugin 'ntpeters/vim-better-whitespace'
 " Plugin gitgutter
 if has('signs')
     Plugin 'airblade/vim-gitgutter'
@@ -83,6 +84,8 @@ set visualbell                  " don't beep
 set noerrorbells                " don't beep
 set cursorline                  " hightlight current line
 set wildmenu                    " visual autocomplete for command menu
+set list                        " ordered sequence of items
+set listchars=trail:·,tab:»»    " trail: Character to show for trailing spaces, tab: two characters to be used to show a tab.
 
 autocmd FileType groovy setlocal noexpandtab copyindent  preserveindent  softtabstop=0  shiftwidth=4  tabstop=4
 au BufReadPost *.twig set syntax=html
@@ -90,15 +93,16 @@ au BufReadPost *.ejs set syntax=html
 au BufReadPost *.ctp set syntax=php
 
 " Mapping
-" mapping NERDTree
-map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR> " mapping NERDTree
+let g:ctrlp_map = '<F3>' " mapping CtrlP
+nnoremap <S-u> :red <CR> " redo
 " mapping move line
-nnoremap <C-S-k> :m .-2<CR>==
-nnoremap <C-S-j> :m .+1<CR>==
-inoremap <C-S-j> <Esc>:m .+1<CR>==gi
-inoremap <C-S-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-S-j> :m '>+1<CR>gv=gv
-vnoremap <C-S-k> :m '<-2<CR>gv=gv
+nnoremap <C-k> :m .-2<CR>==
+nnoremap <C-j> :m .+1<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
 " mapping save
 :inoremap <c-s> <Esc>:update<CR>
 :inoremap <c-s> <c-o>:update<CR>

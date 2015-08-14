@@ -2,14 +2,12 @@
 
 echo "Installing..."
 
-echo "copy .vimrc..."
-rm ~/.vimrc
+echo "Copy .vimrc"
 cp vimrc ~/.vimrc
-sleep 3
 
 if [ ! -d ~/.vim/bundle/Vundle.vim/ ]
 then
-    echo "copy .vim/..."
+    echo "Copy .vim/"
     if [ ! -d ~/.vim/ ]
     then
         mkdir ~/.vim/
@@ -19,18 +17,21 @@ then
         mkdir ~/.vim/bundle/
     fi
     cp -R vim/bundle/ ~/.vim/
-    sleep 3
 fi
 
-echo "copy schema..."
+echo "Copy schema"
 if [ ! -d ~/.vim/colors/ ]
 then
     mkdir ~/.vim/colors/
 fi
 cp -R schema/vim-colors-solarized/colors/ ~/.vim/
-sleep 3
 
+echo "Install plugins"
 vim +PluginInstall +qall
+echo "Clean plugins"
 vim +PluginClean +qall
+
+echo "Install powerline fonts"
+./other/fonts/install.sh
 
 echo "----- Successfully installed ------"
