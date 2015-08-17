@@ -43,6 +43,7 @@ if has('signs')
     let g:gitgutter_eager = 0         " Don't run eagerly
 endif
 " End gitgutter
+Plugin 'christoomey/vim-tmux-navigator'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,12 +100,12 @@ nnoremap <S-u> :red <CR> " redo
 map <F2> :NERDTreeToggle<CR>
 map <F3> :NERDTreeFind<CR>    " locates the file in the tree
 " mapping move line
-nnoremap <C-k> :m .-2<CR>==
-nnoremap <C-j> :m .+1<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+nnoremap <S-k> :m .-2<CR>==
+nnoremap <S-j> :m .+1<CR>==
+inoremap <S-j> <Esc>:m .+1<CR>==gi
+inoremap <S-k> <Esc>:m .-2<CR>==gi
+vnoremap <S-j> :m '>+1<CR>gv=gv
+vnoremap <S-k> :m '<-2<CR>gv=gv
 " mapping save
 :inoremap <c-s> <Esc>:update<CR>
 :inoremap <c-s> <c-o>:update<CR>
