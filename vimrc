@@ -34,7 +34,6 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'dsawardekar/wordpress.vim'
 Plugin 'ervandew/supertab'
 Plugin 'kien/ctrlp.vim.git'
-Plugin 'ap/vim-buftabline'
 Plugin 'ntpeters/vim-better-whitespace'
 " Plugin gitgutter
 if has('signs')
@@ -94,7 +93,9 @@ au BufReadPost *.ejs set syntax=html
 au BufReadPost *.ctp set syntax=php
 
 " Mapping
-let g:ctrlp_map = '<F4>' " mapping CtrlP
+" mapping CtrlP
+let g:ctrlp_map = '<F4>'
+map <F5> :CtrlPMRUFiles <CR>
 nnoremap <S-u> :red <CR> " redo
 " mapping NERDTree
 map <F2> :NERDTreeToggle<CR>
