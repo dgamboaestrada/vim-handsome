@@ -93,10 +93,12 @@ au BufReadPost *.ejs set syntax=html
 au BufReadPost *.ctp set syntax=php
 
 " Mapping
+nnoremap <S-u> :red <CR> " redo
+map m :s/^/\/\//g <CR>
+map <C-m> :s/\/\///g <CR>
 " mapping CtrlP
 let g:ctrlp_map = '<F4>'
 map <F5> :CtrlPMRUFiles <CR>
-nnoremap <S-u> :red <CR> " redo
 " mapping NERDTree
 map <F2> :NERDTreeToggle<CR>
 map <F3> :NERDTreeFind<CR>    " locates the file in the tree
