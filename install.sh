@@ -31,7 +31,11 @@ vim +PluginInstall +qall
 echo "Clean plugins"
 vim +PluginClean +qall
 
-echo "Install powerline fonts"
-./other/fonts/install.sh
+read -p "Install powerline fonts (Y/n)? " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    source ./other/fonts/install.sh
+fi
 
 echo "----- Successfully installed ------"
