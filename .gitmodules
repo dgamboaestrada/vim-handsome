@@ -7,3 +7,6 @@
 [submodule "other/fonts"]
 	path = other/fonts
 	url = git@github.com:powerline/fonts.git
+[submodule "other/gnome-terminal-colors-solarized"]
+	path = other/gnome-terminal-colors-solarized
+	url = git@github.com:Anthony25/gnome-terminal-colors-solarized.git
