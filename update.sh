@@ -1,5 +1,5 @@
 #!/bin/bash
-git fetch origin master
+git fetch origin
 git pull origin master
 
 echo "Updating..."
