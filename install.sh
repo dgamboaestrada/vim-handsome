@@ -3,7 +3,7 @@
 echo "Installing..."
 
 echo "Copy .vimrc"
-cp vimrc ~/.vimrc
+cp ./vime/vimrc ~/.vimrc
 
 if [ ! -d ~/.vim/bundle/Vundle.vim/ ]
 then
@@ -16,7 +16,7 @@ then
     then
         mkdir ~/.vim/bundle/
     fi
-    cp -R vim/bundle/ ~/.vim/
+    cp -R ./vim/bundle/ ~/.vim/
 fi
 
 echo "Copy schema"
@@ -24,7 +24,7 @@ if [ ! -d ~/.vim/colors/ ]
 then
     mkdir ~/.vim/colors/
 fi
-cp -R schema/vim-colors-solarized/colors/ ~/.vim/
+cp -R ./vim/vim-colors-solarized/colors/ ~/.vim/
 
 echo "Install plugins"
 vim +PluginInstall +qall

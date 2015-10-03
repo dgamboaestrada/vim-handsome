@@ -1,11 +1,8 @@
 #!/bin/bash
-git fetch origin
-git pull origin master
-
 echo "Updating..."
 
 echo "Copy .vimrc"
-cp vimrc ~/.vimrc
+cp ./vim/vimrc ~/.vimrc
 
 echo "Install plugins"
 vim +PluginInstall +qall
