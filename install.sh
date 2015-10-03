@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "Installing..."
+echo "Installing vim awesome..."
 
 echo "Copy .vimrc"
-cp ./vime/vimrc ~/.vimrc
+cp ./vim/vimrc ~/.vimrc
 
 if [ ! -d ~/.vim/bundle/Vundle.vim/ ]
 then
@@ -19,7 +19,7 @@ then
     cp -R ./vim/bundle/ ~/.vim/
 fi
 
-echo "Copy schema"
+echo "Copy colors"
 if [ ! -d ~/.vim/colors/ ]
 then
     mkdir ~/.vim/colors/
@@ -31,11 +31,32 @@ vim +PluginInstall +qall
 echo "Clean plugins"
 vim +PluginClean +qall
 
-read -p "Install powerline fonts (Y/n)? " -n 1 -r
+echo "Install powerline fonts"
+source ./other/fonts/install.sh
+
+echo "Copy .tmux.config"
+if [ ! -f ~/.tmux.config ]
+then
+    cp ./other/tmux.config ~/.tmux.config
+else
+    sed -i '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.tmux.config
+    cat ./other/tmux.config >> ~/.tmux.config
+fi
+
+echo "Copy .zshrc"
+if [ ! -f ~/.zshrc ]
+then
+    cp ./other/zshrc ~/.zshrc
+else
+    sed -i '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.zshrc
+    cat ./other/zshrc >> ~/.zshrc
+fi
+
+read -p "Install gnome terminal colors solarized (Y/n)? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    source ./other/fonts/install.sh
+    source ./other/gnome-terminal-colors-solarized/install.sh
 fi
 
 echo "----- Successfully installed ------"

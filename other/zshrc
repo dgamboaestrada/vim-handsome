@@ -1,0 +1,5 @@
+# ----- Begin vim-awesome -----
+alias tmux="tmux -2"
+# Ctrl s
+alias vim="stty stop '' -ixoff ; vim"
+# ----- End vim-awesome -----
