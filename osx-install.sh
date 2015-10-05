@@ -32,7 +32,7 @@ echo "Clean plugins"
 vim +PluginClean +qall
 
 echo "Install powerline fonts"
-source ./other/fonts/install.sh
+./other/fonts/install.sh
 
 echo "Copy .tmux.config"
 if [ ! -f ~/.tmux.config ]

@@ -32,7 +32,7 @@ echo "Clean plugins"
 vim +PluginClean +qall
 
 echo "Install powerline fonts"
-source ./other/fonts/install.sh
+./other/fonts/install.sh
 
 echo "Copy .tmux.config"
 if [ ! -f ~/.tmux.config ]
@@ -56,7 +56,7 @@ read -p "Install gnome terminal colors solarized (Y/n)? " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    source ./other/gnome-terminal-colors-solarized/install.sh
+    ./other/gnome-terminal-colors-solarized/install.sh
 fi
 
 echo "----- Successfully installed ------"
