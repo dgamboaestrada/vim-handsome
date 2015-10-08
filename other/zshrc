@@ -2,4 +2,5 @@
 alias tmux="tmux -2"
 # Ctrl s
 alias vim="stty stop '' -ixoff ; vim"
+ttyctl -f # 'Frozing' tty, so after any command terminal settings will be restored
 # ----- End vim-awesome -----

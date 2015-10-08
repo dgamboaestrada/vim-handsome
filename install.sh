@@ -34,13 +34,13 @@ vim +PluginClean +qall
 echo "Install powerline fonts"
 ./other/fonts/install.sh
 
-echo "Copy .tmux.config"
-if [ ! -f ~/.tmux.config ]
+echo "Copy .tmux.conf"
+if [ ! -f ~/.tmux.conf ]
 then
-    cp ./other/tmux.config ~/.tmux.config
+    cp ./other/tmux.conf ~/.tmux.conf
 else
-    sed -i '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.tmux.config
-    cat ./other/tmux.config >> ~/.tmux.config
+    sed -i '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.tmux.conf
+    cat ./other/tmux.conf >> ~/.tmux.conf
 fi
 
 echo "Copy .zshrc"
