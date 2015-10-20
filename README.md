@@ -30,27 +30,27 @@ gg | Cursor al inicio del archivo
 G | Cursor al final del archivo
 control + f | Avanzar una página
 control + b | Retroceder una página
-$ | Cursor al final de la linea
-0 | Cursor al principio de la linea
-f + caracter | Posiciona cursor hacia la derecha sobre la linea actual en el primer caracte encontrado dado
-F + caracter | Posiciona cursor hacia la izquierda sobre la linea actual en el primer caracter encontrado dado
+$ | Cursor al final de la línea
+0 | Cursor al principio de la línea
+f + caracter | Posiciona cursor hacia la derecha sobre la línea actual en el primer caracter encontrado dado
+F + caracter | Posiciona cursor hacia la izquierda sobre la línea actual en el primer caracter encontrado dado
 i | Incsertar texto
 a | Insertar texto a continuación del cursor
-A | Incertar texto al final de la linea
+A | Incertar texto al final de la línea
 s | Borrar e insertar en la poscion del cursor actual
 r | Remplazar caracter en la posicion del cursor actual
 R | Sobreescribir
-o | Inserta nueva linea debajo de la linea actual
-O | Inserta nueva linea arriba de la linea actual
+o | Inserta nueva línea debajo de la línea actual
+O | Inserta nueva línea arriba de la línea actual
 u | Deshacer el último cambio
 control + R | Rehacer el último cambio
 x | Borra caracter sobre el cursor
 X | Borra caracter hacia atras del cursor
-dd | Borra linea actual
-D | Borra texto de la linea actual desde la posicion del curzor hacia la derecha
+dd | Borra línea actual
+D | Borra texto de la línea actual desde la posicion del curzor hacia la derecha
 dw | Borra palabra
 cw | Cambiar palabra
-yy | Copia linea actual
+yy | Copia línea actual
 yw | Copia palabra
 p | Pegar
 P | Pegar haca atras del cursor
@@ -61,7 +61,7 @@ ma | Crear marca con la etiqueta a
 n | Siguiente resultado de la busqueda
 N | Siguiente resultado hacia atras de la busqueda
 %s/palabra/nueva palabra | Buscar y reemplazar
-J | Une dos lineas
+J | Une dos líneas
 r | Leer el contenido de un archivo
 . | Ejecuta ultimo comando
 >> | Espaciar hacia la derecha
