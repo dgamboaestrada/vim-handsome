@@ -86,6 +86,8 @@ set cursorline                  " hightlight current line
 set wildmenu                    " visual autocomplete for command menu
 set list                        " ordered sequence of items
 set listchars=trail:·,tab:»»    " trail: Character to show for trailing spaces, tab: two characters to be used to show a tab.
+set colorcolumn=100             " highlights 100 characters long
+match ErrorMsg '\%>101v.\+'     " message error above 100 characters long
 
 autocmd FileType groovy setlocal noexpandtab copyindent  preserveindent  softtabstop=0  shiftwidth=4  tabstop=4
 au BufReadPost *.twig set syntax=html
