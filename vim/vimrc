@@ -121,6 +121,7 @@ nnoremap <C-X> :bd<CR>      " close single buffer, if has changes needs ! to for
 vnoremap <C-c> :yank + <CR> " copy to system clipboard in normal mode
 nnoremap <C-c> :yank + <CR> " copy to system clipboard in visual mode
 " Commenting blocks of code.
+let b:comment_leader = '// '
 autocmd FileType c,cpp,java,scala,php    let b:comment_leader = '// '
 autocmd FileType sh,ruby,python          let b:comment_leader = '# '
 autocmd FileType conf,fstab              let b:comment_leader = '# '
@@ -132,3 +133,6 @@ noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<
 " Insert new-line
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
+" mapping join
+vnoremap <C-j> :join <CR> " join line in normal mode
+nnoremap <C-j> :join <CR> " join line in visual mode
