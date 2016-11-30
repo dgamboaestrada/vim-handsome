@@ -29,7 +29,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 " End vim-airline
 Plugin 'scrooloose/syntastic'
+" Plugin on nerdtree
 Plugin 'scrooloose/nerdtree'
+let NERDTreeShowHidden=1
+" End vim-airline
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'dsawardekar/wordpress.vim'
 Plugin 'ervandew/supertab'
@@ -136,3 +139,13 @@ nmap <CR> o<Esc>
 " mapping join
 vnoremap <C-j> :join <CR> " join line in normal mode
 nnoremap <C-j> :join <CR> " join line in visual mode
+
+" Add support for custom user settings
+if filereadable(glob("~/.vimrc.local")) 
+    source ~/.vimrc.local
+endif
+
+" Add support for project-folder settings
+if filereadable(glob(".vimrc")) 
+    source .vimrc
+endif
