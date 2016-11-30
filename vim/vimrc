@@ -141,6 +141,11 @@ vnoremap <C-j> :join <CR> " join line in normal mode
 nnoremap <C-j> :join <CR> " join line in visual mode
 
 " Add support for custom user settings
-if filereadable(glob("~/.vimrc.local")) 
+if filereadable(glob("~/.vimrc.local"))
     source ~/.vimrc.local
+endif
+
+" Add support for project-folder settings
+if filereadable(glob(".vimrc"))
+    source .vimrc
 endif
