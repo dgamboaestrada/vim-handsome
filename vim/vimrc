@@ -146,6 +146,6 @@ if filereadable(glob("~/.vimrc.local"))
 endif
 
 " Add support for project-folder settings
-if filereadable(glob(".vimrc"))
-    source .vimrc
+if filereadable(glob(".project.vimrc")) 
+    source .project.vimrc
 endif
