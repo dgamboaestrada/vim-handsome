@@ -16,7 +16,7 @@ then
     then
         mkdir ~/.vim/bundle/
     fi
-    cp -R ./vim/bundle/ ~/.vim/bundle/
+    cp -R ./vim/bundle/ ~/.vim/
 fi
 
 echo "Copy colors"
@@ -24,7 +24,7 @@ if [ ! -d ~/.vim/colors/ ]
 then
     mkdir ~/.vim/colors/
 fi
-cp -R ./vim/vim-colors-solarized/colors/ ~/.vim/colors/
+cp -R ./vim/vim-colors-solarized/colors/ ~/.vim/
 
 echo "Install plugins"
 vim +PluginInstall +qall
