@@ -134,6 +134,9 @@ autocmd FileType mail                    let b:comment_leader = '> '
 autocmd FileType vim                     let b:comment_leader = '" '
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+" Map mode paste and not paste
+noremap <silent> ,pp :<C-B>silent <C-E>set paste<CR> " map paste with ,pp
+noremap <silent> ,pu :<C-B>silent <C-E>set nopaste<CR> " map not paste with ,pu
 " Insert new-line
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
@@ -147,6 +150,6 @@ if filereadable(glob("~/.vimrc.local"))
 endif
 
 " Add support for project-folder settings
-if filereadable(glob(".project.vimrc")) 
+if filereadable(glob(".project.vimrc"))
     source .project.vimrc
 endif
