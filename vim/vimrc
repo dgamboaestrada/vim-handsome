@@ -25,34 +25,42 @@ Plugin 'bling/vim-airline'
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+
 " Plugin syntastic
 Plugin 'scrooloose/syntastic'
+
 " Plugin nerdtree
 Plugin 'scrooloose/nerdtree'
 let NERDTreeShowHidden=1
 map <F2> :NERDTreeToggle<CR>
 map <F3> :NERDTreeFind<CR>    " locates the file in the tree
+
 " Plugin phpcomplete
 Plugin 'shawncplus/phpcomplete.vim'
+
 " Plugin supertab
 Plugin 'ervandew/supertab'
+
 " Plugin ctrlp
 Plugin 'kien/ctrlp.vim.git'
 let g:ctrlp_map = '<F4>'
 map <F5> :CtrlPMRUFiles <CR>
+
 " Plugin vim-better-whitespace
 Plugin 'ntpeters/vim-better-whitespace'
+
 " Plugin gitgutter
 if has('signs')
     Plugin 'airblade/vim-gitgutter'
     let g:gitgutter_escape_grep = 1   " Use raw grep
     let g:gitgutter_eager = 0         " Don't run eagerly
 endif
+
 " Plugin vim-tmux-navigator
 Plugin 'christoomey/vim-tmux-navigator'
-" Plugin vim-multiple-cursors
-Plugin 'terryma/vim-multiple-cursors'
-let g:multi_cursor_start_key='<F6>'
+
+Plugin 'dsawardekar/wordpress.vim' " Plugin site https://github.com/dsawardekar/wordpress
+Plugin 'tpope/vim-fugitive' " Plugin site https://github.com/tpope/vim-fugitive 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
