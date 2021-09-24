@@ -1,12 +1,9 @@
-scriptencoding utf-8
-set encoding=utf-8
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " schema config
 syntax enable
-set background=dark " values light, dark
+set background=light " values light, dark
 let g:solarized_termcolors=16
 let g:solarized_termtrans=1
 set t_Co=256
@@ -131,18 +128,17 @@ vmap <C-s> <esc>:w<CR>gv
 set hidden
 nnoremap <C-N> :bnext<CR>   " next buffer
 nnoremap <C-P> :bprev<CR>   " prev buffer
-nnoremap <C-X> :bd<CR>      " close single buffer, if has changes needs ! to force
 " mapping yank +
 vnoremap <C-c> :yank + <CR> " copy to system clipboard in normal mode
 nnoremap <C-c> :yank + <CR> " copy to system clipboard in visual mode
 " Commenting blocks of code.
 let b:comment_leader = '// '
-autocmd FileType c,cpp,java,scala,php    let b:comment_leader = '// '
-autocmd FileType sh,ruby,python          let b:comment_leader = '# '
-autocmd FileType conf,fstab              let b:comment_leader = '# '
-autocmd FileType tex                     let b:comment_leader = '% '
-autocmd FileType mail                    let b:comment_leader = '> '
-autocmd FileType vim                     let b:comment_leader = '" '
+autocmd FileType c,cpp,java,scala,php,javascript let b:comment_leader = '// '
+autocmd FileType sh,ruby,python                  let b:comment_leader = '# '
+autocmd FileType conf,fstab,yaml,tf              let b:comment_leader = '# '
+autocmd FileType tex                             let b:comment_leader = '% '
+autocmd FileType mail                            let b:comment_leader = '> '
+autocmd FileType vim                             let b:comment_leader = '" '
 noremap <silent> ,cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> ,cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
 " Map mode paste and not paste
