@@ -1,15 +1,9 @@
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
-	url = git@github.com:VundleVim/Vundle.vim.git
-[submodule "schema/vim-colors-solarized"]
-	path = schema/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
-[submodule "other/fonts"]
-	path = other/fonts
-	url = git@github.com:powerline/fonts.git
+	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "other/gnome-terminal-colors-solarized"]
 	path = other/gnome-terminal-colors-solarized
-	url = git@github.com:Anthony25/gnome-terminal-colors-solarized.git
+	url = https://github.com/aruhier/gnome-terminal-colors-solarized.git
 [submodule "other/osx-terminal.app-colors-solarized"]
 	path = other/osx-terminal.app-colors-solarized
-	url = git@github.com:tomislav/osx-terminal.app-colors-solarized.git
+	url = https://github.com/tomislav/osx-terminal.app-colors-solarized.git

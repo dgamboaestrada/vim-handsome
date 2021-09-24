@@ -16,7 +16,7 @@ then
     then
         mkdir ~/.vim/bundle/
     fi
-    cp -R ./vim/bundle/ ~/.vim/bundle/
+    cp -R ./vim/bundle/* ~/.vim/bundle/
 fi
 
 echo "Copy colors"
@@ -24,7 +24,7 @@ if [ ! -d ~/.vim/colors/ ]
 then
     mkdir ~/.vim/colors/
 fi
-cp -R ./vim/vim-colors-solarized/colors/ ~/.vim/colors/
+cp ./vim/vim-colors-solarized/colors/solarized.vim ~/.vim/colors/
 
 echo "Install plugins"
 vim +PluginInstall +qall
@@ -39,7 +39,11 @@ if [ ! -f ~/.tmux.conf ]
 then
     cp ./other/tmux.conf ~/.tmux.conf
 else
-    sed -i '' '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.tmux.conf
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        sed -i '' '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.tmux.conf
+    else
+        sed -i '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.tmux.conf
+    fi
     cat ./other/tmux.conf >> ~/.tmux.conf
 fi
 
@@ -48,7 +52,11 @@ if [ ! -f ~/.zshrc ]
 then
     cp ./other/zshrc ~/.zshrc
 else
-    sed -i '' '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.zshrc
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        sed -i '' '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.zshrc
+    else
+        sed -i '/# ----- Begin vim-awesome -----/,/# ----- End vim-awesome -----/ d' ~/.zshrc
+    fi
     cat ./other/zshrc >> ~/.zshrc
 fi
 
