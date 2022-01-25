@@ -70,7 +70,7 @@ N       | Repite búsqueda a la siguiente ocurrencia, invierte dirección
 :s/viejo/nuevo/g/c  | Sustituye todas las ocurrencias de 'viejo' a 'nuevo' en todo el documento y pregunta por confirmación
 &   | Repite el último comando de sustitución 's'
 
-### Movimiento del cursor 
+### Movimiento del cursor
 Comando | Acción
 ------- | ------
 $   | Fin de la línea
@@ -117,6 +117,9 @@ Comando | Acción
 :wq nuevoArchivo    | Termina y guarda documento con el nombre 'nuevoArchivo'
 :x  | Termina y guarda documento
 :qall | Termina y cierra todas las ventanas
+:w !sudo tee % | Guardar archivo con permisos root
+:bufdo bd | Cerrar todos los buffers
+:bufdo w | Guardar todos los buffers
 
 ### Números y rangos
 Comando | Acción
@@ -153,3 +156,9 @@ Comando | Acción
 =  | Identar
 s  | Borrar e insertar en la posición del cursor actual (desde modo normal pasándolo a insert)
 :! | Ejecutar comando bash
+
+### Shortcuts
+Comando | Acción
+------- | ------
+Ctrl-A | Incrementa el siguiente número
+Ctrl-X | Decrementa el siguiente número
