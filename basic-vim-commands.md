@@ -162,4 +162,4 @@ Comando | Acción
 ------- | ------
 Ctrl-A | Incrementa el siguiente número
 Ctrl-X | Decrementa el siguiente número
-g, C-g | En modo visual, cuenta las lineas en el rago seleccionado
+g, Ctrl-g | En modo visual, cuenta las lineas en el rago seleccionado
