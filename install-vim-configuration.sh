@@ -34,6 +34,9 @@ vim +PluginClean +qall
 echo "Install powerline fonts"
 ./other/fonts/install.sh
 
+echo "Installing tmux plugin manager"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 echo "Copy .tmux.conf"
 if [ ! -f ~/.tmux.conf ]
 then
