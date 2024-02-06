@@ -3,15 +3,6 @@ set encoding=utf-8
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" schema config
-syntax enable
-set background=light " values light, dark
-let g:solarized_termcolors=16
-let g:solarized_termtrans=1
-set t_Co=256
-colorscheme solarized
-" end schema config
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -20,6 +11,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+" Plugin editorconfig
 Plugin 'editorconfig/editorconfig-vim'
 " Keep Plugin commands between vundle#begin/end.
 " Plugin vim-airline
@@ -62,7 +54,8 @@ endif
 Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'dsawardekar/wordpress.vim' " Plugin site https://github.com/dsawardekar/wordpress
-Plugin 'tpope/vim-fugitive' " Plugin site https://github.com/tpope/vim-fugitive 
+Plugin 'tpope/vim-fugitive' " Plugin site https://github.com/tpope/vim-fugitive
+Plugin 'dracula/vim', { 'name': 'dracula' }
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -80,6 +73,15 @@ filetype plugin indent on    " required
 " "
 " " see :h vundle for more details or wiki for FAQ
 " " Put your non-Plugin stuff after this line
+
+" theme config
+set background=dark " values: light, dark
+let g:solarized_termcolors=16
+let g:solarized_termtrans=1
+set t_Co=256
+syntax enable
+colorscheme dracula " Theme values: solarized, dracula
+" end theme config
 
 set number                      " always show line numbers
 set mouse=a                     " copy text with the mouse
@@ -134,7 +136,7 @@ nnoremap <C-P> :bprev<CR>   " prev buffer
 vnoremap <C-c> :yank + <CR> " copy to system clipboard in normal mode
 nnoremap <C-c> :yank + <CR> " copy to system clipboard in visual mode
 " Commenting blocks of code.
-let b:comment_leader = '// '
+let b:comment_leader = '# '
 autocmd FileType c,cpp,java,scala,php,javascript let b:comment_leader = '// '
 autocmd FileType sh,ruby,python                  let b:comment_leader = '# '
 autocmd FileType conf,fstab,yaml,tf              let b:comment_leader = '# '
