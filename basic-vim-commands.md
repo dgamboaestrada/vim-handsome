@@ -45,7 +45,7 @@ J   | Junta la línea actual con la siguiente
 u   | Deshacer el último cambio de texto
 U   | Deshacer los cambios en la línea actual
 . (punto)   | Repite el último cambio de texto
->>  | Mueve la línea actual a la derecha un tabulador
+\>>  | Mueve la línea actual a la derecha un tabulador
 <<  | Mueve la línea actual a la izquierda un tabulador
 
 ### Copiar y pegar texto
@@ -162,3 +162,4 @@ Comando | Acción
 ------- | ------
 Ctrl-A | Incrementa el siguiente número
 Ctrl-X | Decrementa el siguiente número
+g, Ctrl-g | En modo visual, cuenta las lineas en el rago seleccionado
