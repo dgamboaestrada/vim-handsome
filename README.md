@@ -20,3 +20,7 @@ cd vim-handsome
 ```
 ./other/gnome-terminal-colors-solarized/install.sh
 ```
+
+### Interesting resources
+- https://github.com/ohmyzsh/ohmyzsh
+- https://github.com/ohmybash/oh-my-bash
