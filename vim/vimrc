@@ -56,6 +56,16 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'dsawardekar/wordpress.vim' " Plugin site https://github.com/dsawardekar/wordpress
 Plugin 'tpope/vim-fugitive' " Plugin site https://github.com/tpope/vim-fugitive
 Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'github/copilot.vim' " Plugin Copilot https://github.com/github/copilot.vim
+Plugin 'hashivim/vim-terraform' " Plugin Terraform
+
+" Add maktaba and codefmt to the runtimepath.
+" (The latter must be installed before it can be used.)
+Plugin 'google/vim-maktaba'
+Plugin 'google/vim-codefmt'
+" Also add Glaive, which is used to configure codefmt's maktaba flags. See
+" `:help :Glaive` for usage.
+Plugin 'google/vim-glaive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -80,7 +90,7 @@ let g:solarized_termcolors=16
 let g:solarized_termtrans=1
 set t_Co=256
 syntax enable
-colorscheme dracula " Theme values: solarized, dracula
+colorscheme solarized " Theme values: solarized, dracula
 " end theme config
 
 set number                      " always show line numbers
@@ -136,7 +146,7 @@ nnoremap <C-P> :bprev<CR>   " prev buffer
 vnoremap <C-c> :yank + <CR> " copy to system clipboard in normal mode
 nnoremap <C-c> :yank + <CR> " copy to system clipboard in visual mode
 " Commenting blocks of code.
-let b:comment_leader = '# '
+autocmd FileType *                               let b:comment_leader = '#'
 autocmd FileType c,cpp,java,scala,php,javascript let b:comment_leader = '// '
 autocmd FileType sh,ruby,python                  let b:comment_leader = '# '
 autocmd FileType conf,fstab,yaml,tf              let b:comment_leader = '# '
