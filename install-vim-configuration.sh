@@ -1,4 +1,5 @@
-#!/bin/bash
+##!/bin/bash -xv
+set -Eeuo pipefail
 
 echo "Installing vim awesome..."
 
